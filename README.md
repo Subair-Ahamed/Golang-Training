@@ -12,7 +12,7 @@
 
 	-> To install dependencies, use the "go get" command, which will also update the go.mod file automatically:
 		
-            "go get <specified-path>"
+                "go get <specified-path>"
               
 # 3.Authenticating dependencies:
 
@@ -35,12 +35,12 @@
 
   	          "go get <pathname@versiom>"
   	     
-  	 6.2.The -u flag implies that the latest minor or patch releases are to be used):
+  	   6.2.The -u flag implies that the latest minor or patch releases are to be used):
 
-              "go get -u <pathname>"
+                  "go get -u <pathname>"
                  
 # 7.Listing dependencies:
 
 	-> To see a list of the current module and all its dependencies, run the following command:
 
-              "go list -m all" or "go list -m <module-name>"   
+                  "go list -m all" or "go list -m <module-name>"   
