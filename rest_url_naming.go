@@ -7,7 +7,7 @@ import (
 
 func main() {
 
-  //RESTful URI should refer to a resource that is a thing (noun) instead of referring to an action (verb) 
+        //RESTful URI should refer to a resource that is a thing (noun) instead of referring to an action (verb) 
 	//because nouns have properties that verbs do not have – similarly, resources have attributes.
 
 	//Use lowercase letters for route names. Go's HTTP router is case-sensitive by default.
@@ -53,7 +53,7 @@ func helloHandlerByID(w http.ResponseWriter, r *http.Request) {
 	}
 
 	// Extract the ID from the URL path
-  // if the request URL is "/bye/123", this line will extract "123" as the ID.
+  	// if the request URL is "/bye/123", this line will extract "123" as the ID.
 	helloID := r.URL.Path[len("/hello/"):]
 	if helloID == "" {
 		w.WriteHeader(http.StatusBadRequest) //It represents the status code 400, which indicates a bad request from the client.
