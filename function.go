@@ -11,20 +11,22 @@ type Shape interface {
 }
 
 type Circle struct { //interface syntax : type interface_name interface{method signature}
-	radius float32
+	Radius float32
 }
 
 type Rectangle struct {
-	height, width float32
+	//When we give fields in lowercase in a struct like (height, width), it becomes unexported, which can be accessed only within this package.
+	//When we give fields in uppercase in a struct like (Height, Width), it becomes exported, which can be accessed from other packages.
+ 	Height, Width float32 
 }
 
 //Method - Use CamelCase with the first letter capitalized
 func (c Circle) Area() float32 {
-	return math.Pi * c.radius * c.radius
+	return math.Pi * c.Radius * c.Radius
 }
 
 func (r Rectangle) Area() float32 {
-	return r.height * r.width
+	return r.Height * r.Width
 }
 
 //Function - names should use camelCase, where the first letter of each word after the first is capitalized.
@@ -34,8 +36,8 @@ func getArea(s Shape) float32 {
 
 func main() {
 	//Variable - Variable names should use camelCase, which means the first letter of each word is capitalized except for the first word. 
-	c := Circle{radius: 5}
-	r := Rectangle{height: 10, width: 5}
+	c := Circle{Radius: 5}
+	r := Rectangle{Height: 10, Width: 5}
 	fmt.Println(getArea(c))
 	fmt.Println(getArea(r))
 }
