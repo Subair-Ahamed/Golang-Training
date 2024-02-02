@@ -30,3 +30,25 @@ Functions and Variables:
     Constant should use all capital letters and use underscore _ to separate words. Eg. INT_MAX
     If variable type is bool, its name should start with Has, Is, Can or Allow, etc.
     Avoid cryptic abbreviations. Eg: usrAge := 25
+
+REST-URLS:
+
+    -> Singleton and Collection Resources:
+    
+        A resource can be a singleton or a collection.
+        For example, “customers” is a collection resource and “customer” is a singleton resource (in a banking domain).
+        We can identify “customers” collection resource using the URI “/customers“. We can identify a single “customer” resource using the URI “/customers/{customerId}“.
+        
+                    /customers			//is a collection resource
+                    
+                    /customers/{id}		// is a singleton resource
+                
+    -> Collection and Sub-collection Resources
+    
+    A resource may contain sub-collection resources also.
+    For example, sub-collection resource “accounts” of a particular “customer” can be identified using the URN “/customers/{customerId}/accounts” (in a banking domain).
+    Similarly, a singleton resource “account” inside the sub-collection resource “accounts” can be identified as follows: “/customers/{customerId}/accounts/{accountId}“.
+    
+                    /customers						//is a collection resource
+                    
+                    /customers/{id}/accounts		// is a sub-collection resource
