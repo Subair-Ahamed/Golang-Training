@@ -1,0 +1,23 @@
+# .gitignore
+
+# Ignore compiled binaries and executables
+/build/
+*.exe
+
+# Ignore vendor directories
+/vendor/
+
+# Ignore environment-specific files
+.env
+
+# Ignore IDE and editor-specific files
+.idea/
+.vscode/
+
+# Ignore generated files
+*.log
+*.out
+*.pid
+
+# Ignore dependencies
+/go.sum
