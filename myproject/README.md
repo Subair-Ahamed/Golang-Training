@@ -52,10 +52,6 @@ Updates user data.
 curl -X POST -H "Content-Type: application/json" -d '{"id": 1, "name": "Updated Name"}' http://localhost:8080/user/update
 ```
 
-## License
+#### Further Information
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
----
-
-Feel free to customize this template according to your project's specific requirements and add more details as needed!
+- Add further information about this project
